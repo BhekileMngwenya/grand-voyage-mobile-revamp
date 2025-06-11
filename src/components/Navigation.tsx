@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Menu, X, Car } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
@@ -29,8 +29,11 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <Car className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold text-foreground">GrandTravel</span>
+            <img 
+              src="/lovable-uploads/25d4d4cc-6eec-4db0-94c9-3d55fa8ca4ad.png" 
+              alt="Grand Travel Adventures"
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

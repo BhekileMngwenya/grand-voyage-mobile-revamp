@@ -45,15 +45,15 @@ const Index = () => {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
               Premium Transportation
-              <span className="block text-primary">Solutions</span>
+              <span className="block text-primary">Adventures</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
               Experience luxury and comfort with our modern fleet of vehicles. 
-              Safe, reliable, and professional transportation services for all your needs.
+              Safe, reliable, and adventurous transportation services for all your needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8" onClick={handleBookRide}>
-                Book Your Ride
+                Book Your Adventure
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8" asChild>
@@ -69,7 +69,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Why Choose GrandTravel?
+              Why Choose Grand Travel Adventures?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               We provide exceptional transportation services with a focus on safety, comfort, and reliability.
@@ -101,7 +101,7 @@ const Index = () => {
             Ready to Travel in Style?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Book your premium transportation experience today
+            Book your premium transportation adventure today
           </p>
           <Button size="lg" variant="secondary" className="text-lg px-8" onClick={handleBookRide}>
             Get Started Now
@@ -115,7 +115,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-muted-foreground">
-              © 2024 GrandTravel. All rights reserved.
+              © 2014 Grand Travel Adventures. All rights reserved.
             </p>
           </div>
         </div>

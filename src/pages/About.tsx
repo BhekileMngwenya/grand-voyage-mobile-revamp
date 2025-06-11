@@ -5,9 +5,9 @@ import Navigation from "@/components/Navigation";
 
 const About = () => {
   const stats = [
-    { number: "10+", label: "Years Experience" },
-    { number: "5000+", label: "Happy Customers" },
-    { number: "50+", label: "Professional Drivers" },
+    { number: "12+", label: "Years Experience" },
+    { number: "500+", label: "Happy Customers" },
+    { number: "10+", label: "Professional Drivers" },
     { number: "24/7", label: "Customer Support" }
   ];
 
@@ -43,7 +43,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              About GrandTravel
+              About Grand Travel Adventures
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
               Your trusted partner for premium transportation services with over a decade of excellence
@@ -75,10 +75,10 @@ const About = () => {
                 Our Story
               </h2>
               <p className="text-muted-foreground mb-6">
-                Founded in 2014, GrandTravel began with a simple mission: to provide safe, reliable, 
-                and comfortable transportation services that exceed customer expectations. What started 
+                Founded in 2012, Grand Travel Adventures began with a simple mission: to provide safe, reliable, 
+                and adventurous transportation services that exceed customer expectations. What started 
                 as a small family business has grown into a trusted transportation company serving 
-                thousands of satisfied customers.
+                hundreds of satisfied customers.
               </p>
               <p className="text-muted-foreground mb-6">
                 Our commitment to quality, safety, and customer satisfaction has been the driving force 
@@ -94,7 +94,7 @@ const About = () => {
               <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
               <p className="text-muted-foreground mb-6">
                 To provide exceptional transportation experiences that connect people to their destinations 
-                safely, comfortably, and reliably.
+                safely, comfortably, and reliably - with a touch of adventure.
               </p>
               <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
               <p className="text-muted-foreground">

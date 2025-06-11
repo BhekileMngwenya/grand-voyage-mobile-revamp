@@ -1,3 +1,4 @@
+
 import { Car, Users, Shield, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -19,8 +20,7 @@ const Transportation = () => {
       image: "/lovable-uploads/227b8e7a-799b-43ae-baf3-5308d80416a4.png",
       capacity: "14 passengers",
       features: ["Air Conditioning", "Premium Sound System", "Comfortable Seating", "Luggage Space"],
-      description: "Our flagship vehicle perfect for group transportation with modern amenities and comfortable seating.",
-      price: "$120/hour"
+      description: "Our flagship vehicle perfect for group transportation with modern amenities and comfortable seating."
     },
     {
       id: 2,
@@ -28,8 +28,7 @@ const Transportation = () => {
       image: "/lovable-uploads/096b92eb-5ac8-481d-9c23-303e3d519d90.png",
       capacity: "12 passengers",
       features: ["Luxury Interior", "Entertainment System", "Climate Control", "Professional Driver"],
-      description: "Executive-class transportation for business trips and special occasions with premium interior design.",
-      price: "$140/hour"
+      description: "Executive-class transportation for business trips and special occasions with premium interior design."
     },
     {
       id: 3,
@@ -37,8 +36,7 @@ const Transportation = () => {
       image: "/lovable-uploads/1fa0c3f3-d287-4a1f-853e-bb69f74d82ba.png",
       capacity: "16 passengers",
       features: ["Spacious Interior", "Modern Design", "Safety Features", "Reliable Service"],
-      description: "Spacious and comfortable vehicle ideal for larger groups and extended journeys.",
-      price: "$100/hour"
+      description: "Spacious and comfortable vehicle ideal for larger groups and extended journeys."
     }
   ];
 
@@ -120,11 +118,7 @@ const Transportation = () => {
                           </div>
                         </div>
                         
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <span className="text-2xl font-bold text-primary">{vehicle.price}</span>
-                            <span className="text-muted-foreground ml-1">starting from</span>
-                          </div>
+                        <div className="flex items-center justify-end">
                           <Button className="flex items-center gap-2" onClick={handleBookNow}>
                             <Car className="h-4 w-4" />
                             Book Now
