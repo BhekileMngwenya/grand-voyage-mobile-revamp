@@ -3,9 +3,15 @@ import { ArrowRight, Star, Users, Shield, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
+
+  const handleBookRide = () => {
+    navigate('/contact');
+  };
+
   const features = [
     {
       icon: Shield,
@@ -46,7 +52,7 @@ const Index = () => {
               Safe, reliable, and professional transportation services for all your needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8">
+              <Button size="lg" className="text-lg px-8" onClick={handleBookRide}>
                 Book Your Ride
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -97,7 +103,7 @@ const Index = () => {
           <p className="text-xl mb-8 opacity-90">
             Book your premium transportation experience today
           </p>
-          <Button size="lg" variant="secondary" className="text-lg px-8">
+          <Button size="lg" variant="secondary" className="text-lg px-8" onClick={handleBookRide}>
             Get Started Now
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>

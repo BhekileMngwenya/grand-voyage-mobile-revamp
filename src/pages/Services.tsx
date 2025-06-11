@@ -3,50 +3,52 @@ import { Plane, Calendar, Briefcase, Heart, Clock, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
+  const navigate = useNavigate();
+
+  const handleBookService = (serviceName: string) => {
+    // Navigate to contact page with service pre-selected
+    navigate('/contact', { state: { selectedService: serviceName } });
+  };
+
   const services = [
     {
       icon: Plane,
       title: "Airport Transfers",
       description: "Reliable and punctual airport pickup and drop-off services",
-      features: ["Flight tracking", "Meet & greet service", "Luggage assistance", "24/7 availability"],
-      price: "From $45"
+      features: ["Flight tracking", "Meet & greet service", "Luggage assistance", "24/7 availability"]
     },
     {
       icon: Calendar,
       title: "Event Transportation",
       description: "Perfect for weddings, parties, and special occasions",
-      features: ["Group bookings", "Decorated vehicles", "Professional chauffeurs", "Flexible scheduling"],
-      price: "From $80/hour"
+      features: ["Group bookings", "Decorated vehicles", "Professional chauffeurs", "Flexible scheduling"]
     },
     {
       icon: Briefcase,
       title: "Corporate Travel",
       description: "Professional business transportation solutions",
-      features: ["Executive vehicles", "Corporate accounts", "Regular bookings", "Professional drivers"],
-      price: "Custom pricing"
+      features: ["Executive vehicles", "Corporate accounts", "Regular bookings", "Professional drivers"]
     },
     {
       icon: Heart,
       title: "Special Occasions",
       description: "Make your special moments even more memorable",
-      features: ["Wedding transport", "Prom nights", "Anniversaries", "Romantic packages"],
-      price: "From $120/hour"
+      features: ["Wedding transport", "Prom nights", "Anniversaries", "Romantic packages"]
     },
     {
       icon: Clock,
       title: "Hourly Rentals",
       description: "Flexible hourly rental services for any occasion",
-      features: ["Minimum 2 hours", "Waiting time included", "Multiple stops", "Professional driver"],
-      price: "From $60/hour"
+      features: ["Minimum 2 hours", "Waiting time included", "Multiple stops", "Professional driver"]
     },
     {
       icon: MapPin,
       title: "City Tours",
       description: "Explore the city with our guided tour services",
-      features: ["Local guides", "Customizable routes", "Photo stops", "Group discounts"],
-      price: "From $100/tour"
+      features: ["Local guides", "Customizable routes", "Photo stops", "Group discounts"]
     }
   ];
 
@@ -81,7 +83,6 @@ const Services = () => {
                     </div>
                     <div>
                       <CardTitle className="text-xl">{service.title}</CardTitle>
-                      <p className="text-primary font-semibold">{service.price}</p>
                     </div>
                   </div>
                   <p className="text-muted-foreground">{service.description}</p>
@@ -95,7 +96,12 @@ const Services = () => {
                       </div>
                     ))}
                   </div>
-                  <Button className="w-full">Book This Service</Button>
+                  <Button 
+                    className="w-full"
+                    onClick={() => handleBookService(service.title)}
+                  >
+                    Book This Service
+                  </Button>
                 </CardContent>
               </Card>
             ))}

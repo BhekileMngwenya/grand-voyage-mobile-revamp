@@ -1,12 +1,17 @@
 
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Car } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleBookNow = () => {
+    navigate('/contact');
+  };
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -43,7 +48,7 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Button>Book Now</Button>
+            <Button onClick={handleBookNow}>Book Now</Button>
           </div>
 
           {/* Mobile menu button */}
@@ -78,7 +83,7 @@ const Navigation = () => {
               </Link>
             ))}
             <div className="px-3 py-2">
-              <Button className="w-full">Book Now</Button>
+              <Button className="w-full" onClick={handleBookNow}>Book Now</Button>
             </div>
           </div>
         </div>
