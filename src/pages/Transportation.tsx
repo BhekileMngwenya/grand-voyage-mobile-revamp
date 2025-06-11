@@ -1,11 +1,17 @@
-
 import { Car, Users, Shield, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
+import { useNavigate } from "react-router-dom";
 
 const Transportation = () => {
+  const navigate = useNavigate();
+
+  const handleBookNow = () => {
+    navigate('/contact');
+  };
+
   const vehicles = [
     {
       id: 1,
@@ -119,7 +125,7 @@ const Transportation = () => {
                             <span className="text-2xl font-bold text-primary">{vehicle.price}</span>
                             <span className="text-muted-foreground ml-1">starting from</span>
                           </div>
-                          <Button className="flex items-center gap-2">
+                          <Button className="flex items-center gap-2" onClick={handleBookNow}>
                             <Car className="h-4 w-4" />
                             Book Now
                           </Button>
