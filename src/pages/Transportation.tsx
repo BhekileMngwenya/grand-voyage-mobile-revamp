@@ -16,25 +16,28 @@ const Transportation = () => {
   const vehicles = [
     {
       id: 1,
-      name: "Premium Van - Model A",
+      name: "Model A",
       image: "/lovable-uploads/227b8e7a-799b-43ae-baf3-5308d80416a4.png",
       capacity: "14 passengers",
+      vehicle: "Toyota Quantum",
       features: ["Air Conditioning", "Premium Sound System", "Comfortable Seating", "Luggage Space"],
       description: "Our flagship vehicle perfect for group transportation with modern amenities and comfortable seating."
     },
     {
       id: 2,
-      name: "Executive Van - Model B",
+      name: "Model B",
       image: "/lovable-uploads/096b92eb-5ac8-481d-9c23-303e3d519d90.png",
-      capacity: "12 passengers",
+      capacity: "14 passengers",
+      vehicle: "Toyota Quantum",
       features: ["Luxury Interior", "Entertainment System", "Climate Control", "Professional Driver"],
       description: "Executive-class transportation for business trips and special occasions with premium interior design."
     },
     {
       id: 3,
-      name: "Comfort Van - Model C",
+      name: "Model C",
       image: "/lovable-uploads/1fa0c3f3-d287-4a1f-853e-bb69f74d82ba.png",
-      capacity: "16 passengers",
+      capacity: "12 passengers",
+      vehicle: "Hyundai H1",
       features: ["Spacious Interior", "Modern Design", "Safety Features", "Reliable Service"],
       description: "Spacious and comfortable vehicle ideal for larger groups and extended journeys."
     }
@@ -85,7 +88,7 @@ const Transportation = () => {
                     <div>
                       <CardHeader className="p-0 mb-4">
                         <CardTitle className="text-2xl font-bold text-foreground">
-                          {vehicle.name}
+                          {vehicle.name} - {vehicle.vehicle}
                         </CardTitle>
                         <div className="flex items-center gap-2 text-muted-foreground">
                           <Users className="h-4 w-4" />

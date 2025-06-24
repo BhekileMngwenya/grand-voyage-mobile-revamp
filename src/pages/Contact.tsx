@@ -1,5 +1,4 @@
-
-import { Phone, Mail, MapPin, Clock, Car } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -39,24 +38,6 @@ const Contact = () => {
       title: "Hours",
       details: ["24/7 Service Available", "Office: Mon-Fri 8AM-6PM"],
       description: "We're here when you need us most"
-    }
-  ];
-
-  const vehicles = [
-    {
-      model: "Model A",
-      capacity: "14 Seater",
-      vehicle: "Toyota Quantum"
-    },
-    {
-      model: "Model B", 
-      capacity: "14 Seater",
-      vehicle: "Toyota Quantum"
-    },
-    {
-      model: "Model C",
-      capacity: "12 Seater", 
-      vehicle: "Hyundai H1"
     }
   ];
 
@@ -121,37 +102,13 @@ const Contact = () => {
                   </Card>
                 ))}
               </div>
-
-              {/* Vehicle Fleet */}
-              <div className="mt-12">
-                <h3 className="text-2xl font-bold text-foreground mb-6">Our Fleet</h3>
-                <div className="space-y-4">
-                  {vehicles.map((vehicle, index) => (
-                    <Card key={index} className="border-0 shadow-sm">
-                      <CardContent className="p-4">
-                        <div className="flex items-center gap-4">
-                          <div className="p-2 bg-primary/10 rounded-lg">
-                            <Car className="h-5 w-5 text-primary" />
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-foreground">
-                              {vehicle.model} - {vehicle.capacity} Passengers
-                            </h4>
-                            <p className="text-muted-foreground">{vehicle.vehicle}</p>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </div>
             </div>
 
             {/* Contact Form */}
             <div>
               <Card className="border-0 shadow-lg">
                 <CardHeader>
-                  <CardTitle className="text-2xl">Send Us a Message</CardTitle>
+                  <CardTitle className="text-2xl">Company Number: 075 112 3543</CardTitle>
                   <p className="text-muted-foreground">
                     Fill out the form below and we'll get back to you as soon as possible
                   </p>
