@@ -1,5 +1,5 @@
 
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Car } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -11,9 +11,15 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: "Phone",
-      details: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
-      description: "Call us anytime for immediate assistance"
+      title: "Company Phone",
+      details: ["075 112 3543"],
+      description: "Main company line for bookings and inquiries"
+    },
+    {
+      icon: Phone,
+      title: "Driver Contact",
+      details: ["079 797 6064", "Smangaliso Kagiso Nkuna"],
+      description: "Direct contact with our professional driver"
     },
     {
       icon: Mail,
@@ -24,14 +30,33 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Address",
-      details: ["123 Transportation Ave", "Business District, City 12345"],
-      description: "Visit our office for in-person consultations"
+      details: ["Visit our location"],
+      description: "Click below to view our location on Google Maps",
+      link: "https://maps.app.goo.gl/72fprAV2S4Sjm3Ap9?g_st=aw"
     },
     {
       icon: Clock,
       title: "Hours",
       details: ["24/7 Service Available", "Office: Mon-Fri 8AM-6PM"],
       description: "We're here when you need us most"
+    }
+  ];
+
+  const vehicles = [
+    {
+      model: "Model A",
+      capacity: "14 Seater",
+      vehicle: "Toyota Quantum"
+    },
+    {
+      model: "Model B", 
+      capacity: "14 Seater",
+      vehicle: "Toyota Quantum"
+    },
+    {
+      model: "Model C",
+      capacity: "12 Seater", 
+      vehicle: "Hyundai H1"
     }
   ];
 
@@ -80,11 +105,45 @@ const Contact = () => {
                           <p className="text-sm text-muted-foreground mt-2">
                             {info.description}
                           </p>
+                          {info.link && (
+                            <a 
+                              href={info.link} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="inline-block mt-2 text-primary hover:underline"
+                            >
+                              View on Google Maps
+                            </a>
+                          )}
                         </div>
                       </div>
                     </CardContent>
                   </Card>
                 ))}
+              </div>
+
+              {/* Vehicle Fleet */}
+              <div className="mt-12">
+                <h3 className="text-2xl font-bold text-foreground mb-6">Our Fleet</h3>
+                <div className="space-y-4">
+                  {vehicles.map((vehicle, index) => (
+                    <Card key={index} className="border-0 shadow-sm">
+                      <CardContent className="p-4">
+                        <div className="flex items-center gap-4">
+                          <div className="p-2 bg-primary/10 rounded-lg">
+                            <Car className="h-5 w-5 text-primary" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-foreground">
+                              {vehicle.model} - {vehicle.capacity} Passengers
+                            </h4>
+                            <p className="text-muted-foreground">{vehicle.vehicle}</p>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -157,11 +216,11 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Need Immediate Assistance?</h2>
           <p className="text-xl mb-6 opacity-90">
-            Our 24/7 emergency hotline is always available for urgent transportation needs
+            Call our main line for urgent transportation needs
           </p>
           <Button size="lg" variant="secondary" className="text-lg px-8">
             <Phone className="mr-2 h-5 w-5" />
-            Call Emergency Line: +1 (555) 911-RIDE
+            Call Now: 075 112 3543
           </Button>
         </div>
       </section>
