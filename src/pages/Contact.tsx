@@ -1,4 +1,5 @@
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -38,6 +39,24 @@ const Contact = () => {
       title: "Hours",
       details: ["24/7 Service Available", "Office: Mon-Fri 8AM-6PM"],
       description: "We're here when you need us most"
+    }
+  ];
+
+  const socialLinks = [
+    {
+      name: "Facebook",
+      url: "https://www.facebook.com/share/1EgYQsD5aZ/",
+      icon: Facebook
+    },
+    {
+      name: "TikTok", 
+      url: "https://www.tiktok.com/@grandtraveladventures012?_t=ZM-8xTJD8sjh7Y&_r=1",
+      icon: Phone // Using Phone as placeholder since TikTok icon isn't available
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/grndtraveladventures?igsh=Mmd3NjRnMDJ3ZTFo",
+      icon: Instagram
     }
   ];
 
@@ -102,13 +121,32 @@ const Contact = () => {
                   </Card>
                 ))}
               </div>
+
+              {/* Social Media Links */}
+              <div className="mt-8">
+                <h3 className="text-2xl font-bold text-foreground mb-4">Follow Us</h3>
+                <div className="flex gap-4">
+                  {socialLinks.map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 bg-primary/10 rounded-lg hover:bg-primary/20 transition-colors"
+                    >
+                      <social.icon className="h-6 w-6 text-primary" />
+                      <span className="sr-only">{social.name}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
 
             {/* Contact Form */}
             <div>
               <Card className="border-0 shadow-lg">
                 <CardHeader>
-                  <CardTitle className="text-2xl">Company Number: 075 112 3543</CardTitle>
+                  <CardTitle className="text-2xl">Send us a message</CardTitle>
                   <p className="text-muted-foreground">
                     Fill out the form below and we'll get back to you as soon as possible
                   </p>
@@ -132,7 +170,7 @@ const Contact = () => {
                   
                   <div>
                     <Label htmlFor="phone">Phone Number</Label>
-                    <Input id="phone" type="tel" placeholder="+1 (555) 123-4567" />
+                    <Input id="phone" type="tel" placeholder="075 112 3543" />
                   </div>
                   
                   <div>
